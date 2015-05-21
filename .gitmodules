@@ -1,0 +1,3 @@
+[submodule "imedicum-theme-shower"]
+	path = imedicum-theme-shower
+	url = https://github.com/livsi/imedicum-theme-shower.git
