@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1420px" height="515px" viewBox="0 0 1420 515" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>slide5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1-+-slide" sketch:type="MSLayerGroup"></g>
+        <g id="Начальное-состояние" sketch:type="MSLayerGroup" transform="translate(0.000000, 29.000000)">
+            <rect id="Rectangle-1-Copy-3" fill-opacity="0.2" fill="#417505" sketch:type="MSShapeGroup" x="104" y="0" width="29" height="419"></rect>
+            <g id="branches" transform="translate(0.000000, 28.000000)">
+                <path d="M1419.5,249.5 L118.5,249.5" id="develop" stroke="#D0011B" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1418.5,131.5 L118.5,131.5" id="qa" stroke="#F8E81C" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1418.53174,14.5 L117.5,14.5" id="master" stroke="#417505" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <g id="commit-develop" transform="translate(111.000000, 243.000000)" stroke="#979797" fill="#D0011B" sketch:type="MSShapeGroup">
+                    <ellipse cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+                </g>
+                <g id="commit-qa" transform="translate(111.000000, 125.000000)" stroke="#979797" fill="#F6A623" sketch:type="MSShapeGroup">
+                    <ellipse cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+                </g>
+                <g id="commit-master" transform="translate(111.000000, 8.000000)" stroke="#979797" fill="#417505" sketch:type="MSShapeGroup">
+                    <ellipse cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+                </g>
+                <text id="master" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#417505">
+                    <tspan x="12" y="22">master</tspan>
+                </text>
+                <text id="qa" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#F6A623">
+                    <tspan x="62" y="139">qa</tspan>
+                </text>
+                <text id="develop" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#D0011B">
+                    <tspan x="0" y="257">develop</tspan>
+                </text>
+            </g>
+            <g id="tags" transform="translate(137.000000, 12.000000)" font-size="24" font-family="Arial" sketch:type="MSTextLayer" font-weight="bold">
+                <text id="v0.1" fill="#D0011B">
+                    <tspan x="0" y="258">v0.1</tspan>
+                </text>
+                <text id="v0.1" fill="#F6A623">
+                    <tspan x="0" y="140">v0.1</tspan>
+                </text>
+                <text id="v0.1" fill="#417505">
+                    <tspan x="0" y="22">v0.1</tspan>
+                </text>
+            </g>
+        </g>
+        <text id="В-этой-точке-код-в-т" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#417505">
+            <tspan x="7" y="506">В этой точке код в трех основных ветках идентичен</tspan>
+        </text>
+        <g id="Хотфиксы" sketch:type="MSLayerGroup" transform="translate(132.000000, 129.000000)">
+            <g id="commit-qa-copy-3" transform="translate(131.000000, 53.000000)" stroke="#979797" fill="#F6A623" sketch:type="MSShapeGroup">
+                <ellipse id="commit-qa" cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+            </g>
+            <g id="commit-qa-copy" transform="translate(71.000000, 53.000000)" stroke="#979797" fill="#F6A623" sketch:type="MSShapeGroup">
+                <ellipse id="commit-qa" cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+            </g>
+            <g id="commit-qa-copy-5" transform="translate(194.000000, 171.000000)" stroke="#979797" fill="#F6A623" sketch:type="MSShapeGroup">
+                <ellipse id="commit-qa" cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+            </g>
+            <g id="commit-qa-copy-4" transform="translate(134.000000, 171.000000)" stroke="#979797" fill="#F6A623" sketch:type="MSShapeGroup">
+                <ellipse id="commit-qa" cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+            </g>
+            <text id="hotfix/18107" sketch:type="MSTextLayer" font-family="Arial" font-size="18" font-weight="bold" fill="#F6A623">
+                <tspan x="73" y="96">hotfix/18107</tspan>
+            </text>
+            <text id="hotfix/18107-copy" sketch:type="MSTextLayer" font-family="Arial" font-size="18" font-weight="bold" fill="#F6A623">
+                <tspan x="131" y="116">hotfix/18107</tspan>
+            </text>
+            <g id="qa-открыт-для-push" fill="#F6A623">
+                <text id="qa-открыт-для-push-h" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold">
+                    <tspan x="19" y="18">qa открыт для push hotfix only</tspan>
+                </text>
+                <rect id="Rectangle-1" stroke="#979797" fill-opacity="0.2" sketch:type="MSShapeGroup" x="0" y="0" width="250" height="28"></rect>
+            </g>
+            <path d="M93.5,100.5 L137.5,167.5" id="Line" stroke="#F6A623" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M137.5,167.5 L134.079175,156.825828 L129.063961,160.119401 L137.5,167.5 Z" stroke="#F6A623" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M169.5,129.5 L195.5,166.5" id="Line" stroke="#F6A623" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M195.5,166.5 L191.745164,155.938693 L186.836013,159.388366 L195.5,166.5 Z" stroke="#F6A623" stroke-width="3" stroke-linecap="square"></path>
+        </g>
+        <g id="feature/18969-[1]" sketch:type="MSLayerGroup" transform="translate(121.000000, 311.000000)">
+            <path d="M0.5,0.0644362905 L161.5,145.499998" id="Line-Copy-2" stroke="#D0011B" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-2-decoration-1" d="M161.5,145.499998 L155.496675,136.034266 L151.474711,140.486659 L161.5,145.499998 Z" stroke="#D0011B" stroke-width="3" stroke-linecap="square"></path>
+            <text id="feature/18969" sketch:type="MSTextLayer" font-family="Arial" font-size="18" font-weight="bold" fill="#D0011B">
+                <tspan x="141" y="167">feature/18969</tspan>
+            </text>
+        </g>
+        <g id="Новые-фичи" sketch:type="MSLayerGroup" transform="translate(184.000000, 307.000000)">
+            <path d="M0.5,1.06443629 L96.0972443,84.9671922" id="Line" stroke="#D0011B" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M96.0972443,84.9671922 L89.9590826,75.5883346 L86.0012422,80.0978245 L96.0972443,84.9671922 Z" stroke="#D0011B" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M119,0 L180.5,65.5" id="Line-Copy" stroke="#D0011B" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-decoration-1" d="M180.5,65.5 L175.294489,55.5731345 L170.920391,59.6801122 L180.5,65.5 Z" stroke="#D0011B" stroke-width="3" stroke-linecap="square"></path>
+            <text id="Ветки-новых-фич" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#D0011B">
+                <tspan x="190" y="133">Ветки новых фич</tspan>
+            </text>
+            <text id="feature/18969-copy" sketch:type="MSTextLayer" font-family="Arial" font-size="18" font-weight="bold" fill="#D0011B">
+                <tspan x="79" y="103">feature/18969</tspan>
+            </text>
+            <text id="feature/18969-copy-2" sketch:type="MSTextLayer" font-family="Arial" font-size="18" font-weight="bold" fill="#D0011B">
+                <tspan x="149" y="83">feature/18969</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

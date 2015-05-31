@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1420px" height="515px" viewBox="0 0 1420 515" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>slide1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1-+-slide" sketch:type="MSLayerGroup"></g>
+        <g id="Начальное-состояние" sketch:type="MSLayerGroup" transform="translate(0.000000, 29.000000)">
+            <rect id="Rectangle-1-Copy-3" fill-opacity="0.2" fill="#417505" sketch:type="MSShapeGroup" x="104" y="0" width="29" height="419"></rect>
+            <g id="branches" transform="translate(0.000000, 28.000000)">
+                <path d="M1419.5,249.5 L118.5,249.5" id="develop" stroke="#D0011B" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1418.5,131.5 L118.5,131.5" id="qa" stroke="#F8E81C" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M1418.53174,14.5 L117.5,14.5" id="master" stroke="#417505" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <g id="commit-develop" transform="translate(111.000000, 243.000000)" stroke="#979797" fill="#D0011B" sketch:type="MSShapeGroup">
+                    <ellipse cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+                </g>
+                <g id="commit-qa" transform="translate(111.000000, 125.000000)" stroke="#979797" fill="#F6A623" sketch:type="MSShapeGroup">
+                    <ellipse cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+                </g>
+                <g id="commit-master" transform="translate(111.000000, 8.000000)" stroke="#979797" fill="#417505" sketch:type="MSShapeGroup">
+                    <ellipse cx="7.05" cy="7" rx="7.05" ry="7"></ellipse>
+                </g>
+                <text id="master" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#417505">
+                    <tspan x="12" y="22">master</tspan>
+                </text>
+                <text id="qa" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#F6A623">
+                    <tspan x="62" y="139">qa</tspan>
+                </text>
+                <text id="develop" sketch:type="MSTextLayer" font-family="Arial" font-size="24" font-weight="bold" fill="#D0011B">
+                    <tspan x="0" y="257">develop</tspan>
+                </text>
+            </g>
+            <g id="tags" transform="translate(137.000000, 12.000000)" font-size="24" font-family="Arial" sketch:type="MSTextLayer" font-weight="bold">
+                <text id="v0.1" fill="#D0011B">
+                    <tspan x="0" y="258">v0.1</tspan>
+                </text>
+                <text id="v0.1" fill="#F6A623">
+                    <tspan x="0" y="140">v0.1</tspan>
+                </text>
+                <text id="v0.1" fill="#417505">
+                    <tspan x="0" y="22">v0.1</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

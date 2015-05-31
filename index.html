@@ -23,27 +23,33 @@
         set slide ID to get needed elements
         -->
         <style>
-          #Cover h2 {
-            margin: 10px 0 0 -100px;
-            color: #FFF;
-            text-align: center;
-            font-size: 70px;
-          }
-          #Cover p {
-            margin: 0 0 0 20px;
-            text-align: left;
-            color: #FFF;
-            font-style: italic;
-            font-size: 16px;
-          }
-          #Cover p a {
-            color: #FFF;
-          }
-          #Cover .logo {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-          }
+        .cover.w{
+        background: white;
+        }
+        .w div h2{
+        margin: -50px 0 0 -100px;
+        }
+        #Cover h2 {
+        margin: 10px 0 0 -100px;
+        color: #FFF;
+        text-align: center;
+        font-size: 70px;
+        }
+        #Cover p {
+        margin: 0 0 0 20px;
+        text-align: left;
+        color: #FFF;
+        font-style: italic;
+        font-size: 16px;
+        }
+        #Cover p a {
+        color: #FFF;
+        }
+        #Cover .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        }
         </style>
       </div>
     </section>
@@ -62,26 +68,26 @@
             </a>
           </li>
           <li>
-            <a href="http://githowto.com/ru/undoing_committed_changes">
-              ОТМЕНА КОММИТОВ (githowto.com)
+            <a href="http://habrahabr.ru/post/195674/">
+              Тонкости благополучного git-merge (habrahabr.ru)
             </a>
-           </li>
-           <li>
+          </li>
+          <li>
             <a href="http://habrahabr.ru/post/106912/">
               Удачная модель ветвления для Git (habrahabr.ru)
             </a>
-           </li>
-           <li>
+          </li>
+          <li>
             <a href="http://habrahabr.ru/post/28268/">
               Ежедневный Git (habrahabr.ru)
             </a>
           </li>
-           <li>
+          <li>
             <a href="http://w32blaster.livejournal.com/30058.html">
               Successful Git branching model
             </a>
           </li>
-           <li>
+          <li>
             <a href="http://habrahabr.ru/post/161009/">
               Git Rebase: руководство по использованию  (habrahabr.ru)
             </a>
@@ -89,29 +95,27 @@
         </ul>
       </div>
     </section>
-
     <section class="slide">
       <div>
         <h2>Вводная:</h2>
         <ol>
           <li>git - <strong>вспомогательный инструмент</strong>, он не пишет наш код и не делает его лучше. Он тупо следит за изменениями в коде</li>
           <li class="next">
-          <strong>Конфликты merge</strong> кода - неизбежны и нормальны! Значит проект все еще общее дело.
+            <strong>Конфликты merge</strong> кода - неизбежны и нормальны! Значит проект все еще общее дело.
           </li>
           <li class="next">Все что мы делаем - можно разделить на три категории:
             <ul><li>фичи</li>
             <li>баги</li>
             <li>интеграция</li></ul>
           </li>
-          </ol>
-          <div>Накатывание релизов из дева, в который хаотично приходят коммиты - это боль!</div>
-          <p class="note next">
-            <mark>PS:</mark>
-            Да, я люблю git command line.
-          </p>
-        </div>
+        </ol>
+        <div>Накатывание релизов из дева, в который хаотично приходят коммиты - это боль!</div>
+        <p class="note next">
+          <mark>PS:</mark>
+          Да, я люблю git command line.
+        </p>
+      </div>
     </section>
-
     <section class="slide">
       <div>
         <h2>Что происходит:</h2>
@@ -121,82 +125,242 @@
           <li>Тестируем предрелиз</li>
           <li>Выкатываем релиз на продакшн</li>
           <li>Ловим баги в релизе</li>
-          </ol>
-    </section>
-
-    <section class="slide">
-      <div>
-        <h2>Планируем релиз:</h2>
-        <ol>
-          <li>Формализируем фичу в тракере, описываем, рисуем, думаем</li>
-          <li>Выбираем что из беклога выбрать на следующий спринт (планирование спринта)</li>
-          <li>Оцениваем время</li>
-          <li>Распределяем работу в командах</li>
+        </ol>
+      </section>
+      <section class="slide">
+        <div>
+          <h2>Планируем релиз:</h2>
+          <ol>
+            <li>Формализируем фичу в тракере, описываем, рисуем, думаем</li>
+            <li>Выбираем что из беклога выбрать на следующий спринт (планирование спринта)</li>
+            <li>Оцениваем время</li>
+            <li>Распределяем работу в командах</li>
           </ol>
           <div class="next">А как же баги? Иx не планируем, они приходят сами</div>
-    </section>
+        </div>
+      </section>
+      <section class="slide">
+        <div>
+          <h2>Реализуем фичи релиза:</h2>
+          <p>Они взаимосвязаны но изолированы. Их не много. Признак фичи - ее можно втащить в релиз отдельно от других с пользой для проекта.</p>
+        </div>
+      </section>
+      <section class="slide">
+        <div>
+          <h2>Реализуем фичи релиза:</h2>
+          <h3>Ветка MASTER </h3>
+          <p>Это текущее состояние imedicum.ru. ЗАКРЫТА для комитов - туда пушат цельными релизами
+          из QA</p>
+        </div>
+      </section>
+      <section class="slide">
+        <div>
+          <h2>Ветка QA</h2>
+          <p>Ветка QA - текущий релиз. После накатывания очередного релиза на MASTER - от этой ветки ветвятся и в нее вливаются только хотфиксы.<br>
+          Место вливания в MASTER - помечается тегом v0.2. Это текущий релиз, накаченный в мастер к которому можно прилепить только хотфиксы. Точки вливания хотфиксов в мастер - отмечены тегом v0.2.1 Нумерация тегов сквозная.</p>
+          <p>QA = MASTER + Хотфиксы</p>
+        </div>
+      </section>
+      <section class="slide">
+        <div>
+          <h2>Хотфиксы</h2>
+          <p>
+            Хотфиксы вливаются одновременно и в QA и в DEVELOP - чтобы не получилось ситуации открытия уже закрытого бага.<br>
+          Ветка QA может временно закрываться на период тестирования, и после их окончания открывается для пушей вновь. Итераций по тестированию на протяжении релиза может быть несколько.</p>
+        </div>
+      </section>
+      <section class="slide">
+        <div>
+          <h2>Хотфиксы: выкатывание</h2>
+          <p style="color:red">Багоделы должны учитывать в своей работе, что не всегда смогут запушить в QA<br>
+            <span class="next">Хотфиксы мелки и это облегчает задачу пуша</span></p>
+          <div>Если для хотфикса понадобилась ветка - то ее именование - <code>hotfix/19002</code></div>
+        </div>
+      </section>
+        <section class="slide">
+          <div>
+            <h2>Ветка DEVELOP</h2>
+            <div>
+              Ветка DEVELOP - билд продукта, будующий релиз, от него ветвятся и в него вливаются фичи. В момент релиза - то есть когда закончены все запланированные на спринт фичи, эта ветка сливается с QA.
+            </div>
+          </div>
+        </section>
 
-    <section class="slide">
-      <div>
-        <h2>Реализуем фичи релиза:</h2>
-        <p>Они взаимосвязаны но изолированы. Их не много. Признак фичи - ее можно втащить в релиз отдельно от других с пользой для проекта.</p>
-    </section>
+        <section class="slide">
+          <div>
+            <h2>Ветка DEVELOP: push & merge [1]</h2>
+            <div>
+              Если ваша фича умещается в один комит - можно не создавать ветку фичи, накатывайте в DEVELOP из своей локальной ветки develop.
+            </div>
+            <div><strong>"Умещается"</strong> - определяем по составу изменений: до 7 файлов, до 50 строк в сумме, взаимосвязанных и легких для понимания другими.</div>
+          </div>
+        </section>
 
-    <section class="slide">
-      <div>
-        <h2>Реализуем фичи релиза:</h2>
-        <h3>Ветка MASTER </h3>
-        <p>Это текущее состояние imedicum.ru. ЗАКРЫТА для комитов - туда пушат цельными релизами 
-        из QA</p>
-    </section>
+        <section class="slide">
+          <div>
+            <h2>Ветка DEVELOP: push & merge [2]</h2>
+            <div>Если фича состоит из ряда изменений, логически отдельных или реализация фичи дольше релизного срока - выносите ее в ветку.</div>
+            <div>Именование ветки <code>feature/19002</code></div>
+          </div>
+        </section>
 
-    <section class="slide">
-      <div>
-        <h2>Ветка QA</h2>
-        <p>Ветка QA - текущий релиз. После накатывания очередного релиза на MASTER - от этой ветки ветвятся и в нее вливаются только хотфиксы.<br>
-        Место вливания в MASTER - помечается тегом v0.2. Это текущий релиз, накаченный в мастер к которому можно прилепить только хотфиксы. Точки вливания хотфиксов в мастер - отмечены тегом v0.2.1 Нумерация тегов сквозная.</p>
-        <p>QA = MASTER + Хотфиксы</p>
-    </section>
+        <section class="slide">
+          <div>
+            <h2>Ветка DEVELOP: push & merge [3]</h2>
+            <div>В ветку DEVELOP фичи вливаются полностью рабочие.</div>
+            <div>Вливание веток должно проходить без Fast-Forvard, с помошью </div>
+            <code>git merge feature/NUMBER --no-ff</code>
+          </div>
+        </section>
 
-    <section class="slide">
-      <div>
-        <h2>Хотфиксы</h2>
-        <p>
-        Хотфиксы вливаются одновременно и в QA и в DEVELOP - чтобы не получилось ситуации открытия уже закрытого бага.<br>
-        Ветка QA может временно закрываться на период тестирования, и после их окончания открывается для пушей вновь. Итераций по тестированию на протяжении релиза может быть несколько.</p>
-        <p style="color:red">Багоделы должны учитывать в своей работе, что не всегда смогут запушить в QA<br>
-        <span class="next">Хотфиксы мелки и это облегчает задачу пуша</span></p>
-    </section>
+        <!-- slide  -->
+        <section class="slide">
+          <div>
+            <h2>Фича или работает или нет</h2>
+            <img src="pictures/net-polovinchatim-reshenijam.jpg" width="400" alt="">
+          </div>
+        </section>
 
-    <section class="slide">
-      <div>
-        <h2>Реализуем фичи релиза:</h2>
-        <h3>Ветка DEVELOP </h3>
-        <p>Ветка DEVELOP - билд продукта, будующий релиз, от него ветвятся и в него вливаются фичи. В момент релиза - то есть когда закончены все запланированные на спринт фичи, эта ветка сливается с QA.</p>
-    </section>
-    <section class="slide cover" id="Cover2">
-      <div>
-        <img src="pictures/cover_start.jpg" width="1000" alt="">
-        <h2>При подготовке к лекции никто не пострадал</h2>
-        <style>
-          #Cover2 h2 {
-            margin: 10px 0 0 -100px;
+        <!-- slide  -->
+        <section class="slide">
+          <div>
+            <h2>А как же интеграция?</h2>
+            <div>Общие сущности symfony2, которые влияют на весь проект в целом:</div>
+            <ul>
+              <li>Entity и EntityRepository</li>
+              <li>Миграции структуры и данных</li>
+              <li>конфиги</li>
+              <li>Сервисы</li>
+              <li>Состав пакетов: composer.json, composer.lock, AppKernel.php</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- slide  -->
+        <section class="slide">
+          <div>
+            <h2>Перекрестная интеграция</h2>
+            <div>Каждую из этих сущностей, или связный набор - оформляйте отдельным комитом. Если кому нибудь еще понадобится ваше изменение - то станет возмножна операция переноса коммита в другую ветку <code>git cherry-pick ...</code></div>
+            <div>И если ваша фича по каким то причинам не пойдет в PRODUCTION - часть вашей работы попадет туда через другую фичу, где будет использоваться общий функционал.</div>
+          </div>
+        </section>
+
+        <!-- slide 11 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide1.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        <!-- slide 12 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide2.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        <!-- slide 13 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide3.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide4.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide5.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide6.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide7.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide8.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide9.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide10.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+
+        <!-- slide 14 -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide11.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+
+        <!-- slide  -->
+        <section class="slide cover w">
+          <div>
+            <h2>Git</h2>
+            <img src="pictures/slides/slide12.svg" style="width:90%; margin-left:30px" alt="">
+          </div>
+        </section>
+        <section class="slide cover" id="Cover2">
+          <div>
+            <img src="pictures/cover_start.jpg" width="1000" alt="">
+            <h2>Успешных релизов всем нам!</h2>
+            <style>
+            #Cover2 h2 {
+            margin: -70px 0 0 -50px;
             color: #FFF;
             text-align: center;
             font-size: 50px
-          }
-        </style>
-      </div>
-    </section>
-    <p class="badge"><a href="http://git-scm.com/book/ru/v1">Почитать на досуге</a></p>
-    <!--
-    To hide progress bar from entire presentation
-    just remove “progress” element.
-    -->
-    <div class="progress">
-      <div></div>
-    </div>
-    <script src="shower.min.js"></script>
-    <!-- Copyright © 2015 LiVsI -->
-  </body>
-</html>
+            }
+            </style>
+          </div>
+        </section>
+        <p class="badge"><a href="http://git-scm.com/book/ru/v1">Почитать на досуге</a></p>
+        <!--
+        To hide progress bar from entire presentation
+        just remove “progress” element.
+        -->
+        <div class="progress">
+          <div></div>
+        </div>
+        <script src="shower.min.js"></script>
+        <!-- Copyright © 2015 LiVsI -->
+      </body>
+    </html>
